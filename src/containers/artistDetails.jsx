@@ -5,8 +5,6 @@ import { useParams } from 'react-router-dom';
 import Release from '../components/app/Release';
 import { getReleases } from '../services/getArtists';
 
-//PATH: /artistDetail/:artistName/:artistId
-
 export default function artistDetails() {
   const [loading, setLoading] = useState(true);
   const [releases, setReleases] = useState(null);

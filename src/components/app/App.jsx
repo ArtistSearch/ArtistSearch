@@ -13,6 +13,10 @@ export default function App() {
         path="/artistDetail/:artistName/:artistId"
         exact render={(routerProps) => <ArtistDetails {...routerProps} />}
       />
+      <Route
+        path="/release/:artistName/:releaseId/"
+        exact render={(routerProps) => <albumDetails {...routerProps} />}
+      />
     </Switch>
   </Router>;
 }

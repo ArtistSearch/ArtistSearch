@@ -11,7 +11,7 @@ export default function Release({ id, title, artistName }) {
     };
 
     return (
-        <Link to={`/release/${id}/${artistName}`}>
+        <Link to={`/release/${artistName}/${id}`}>
             <h2>{title}</h2>
             <img src={image} alt="album cover" onError={addDefaultSrc} />
         </Link>
