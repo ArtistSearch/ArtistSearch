@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 export const getArtists = async (search) => {
   const res = await fetch(
     `http://musicbrainz.org/ws/2/artist?query=${search}&fmt=json&limit=25`
