@@ -30,10 +30,11 @@ export const getReleases = async (artistID) => {
 
 export const getAlbumInfo = async (releaseID) => {
   const res = await fetch(
-    `http://musicbrainz.org/ws/2/recording?release=${releaseID}&fmt=json`
+    `https://musicbrainz.org/ws/2/recording?release=${releaseID}&fmt=json`
   );
-
+  console.log('*******Res', res);
   const { recordings } = await res.json();
+  console.log('>>>>>Recordings', recordings);
 
   return recordings.map((recording) => {
     return {
