@@ -1,0 +1,55 @@
+/* 
+blue: #7cd5e0,
+grey:#42424c,
+black:#313132,
+red:#e24d43, 
+*/
+
+.artistPage, .albumCard{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.albumlist{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.controls{
+    display: flex;
+    flex-direction:row;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #42424c;
+}
+
+button{
+ margin: 5px;
+}
+
+.pageBtn:enabled{
+    color: #313132;
+    background-color: #7cd5e0;
+    border-radius: 3px;
+}
+
+.artistHdr{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #e24d43;
+}
+
+.albumLink{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #e24d43;
+    text-decoration: underline;
+}
+
+.albumCard{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#42424c;
+    padding: 10px;
+    margin: 10px;
+    width: 160px;
+}
