@@ -1,0 +1,13 @@
+.albumImage {
+  border: solid 1px black;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.albumInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
