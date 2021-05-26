@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './AlbumSongList.css';
 
-export default function AlbumSongList({ songs, art }) {
+export default function AlbumSongList({ songs, art, artist }) {
   //add a variable to convert song length from ms to min:sec
   return (
     <>
@@ -18,7 +18,7 @@ export default function AlbumSongList({ songs, art }) {
       />
       <ul className={styles.albumInfo} aria-label="Album Track List">
         {songs.map((song) => (
-          <Link to="/">
+          <Link to={`/song/${artist}/${song.title}`} key={song.id}>
             <li key={song.id}>
               <h4>{song.title}</h4>
               <p>{song.length}</p>

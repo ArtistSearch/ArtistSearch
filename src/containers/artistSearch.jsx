@@ -1,5 +1,5 @@
 import React from 'react';
 
-export default function artistSearch() {
-  return <div></div>;
+export default function ArtistSearch() {
+  return <div>HOME PAGE</div>;
 }
