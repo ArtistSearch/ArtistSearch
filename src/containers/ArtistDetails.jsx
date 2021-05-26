@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import Loading from '../components/Loading';
 import Release from '../components/releases/Release';
 import { getReleases, getReleaseCount } from '../services/getArtists';
+import style from '../components/releases/Release.modules.css';
 
 export default function artistDetails() {
     const [loading, setLoading] = useState(true);
@@ -35,22 +36,38 @@ export default function artistDetails() {
     };
 
     if (loading) return (
-        <Loading />
+        <div className={style.artistPage}>
+            <Loading />
+        </div>
     );
 
     return (
-        <div>
-            <h1>
+        <div className={style.artistPage}>
+            <h1 className={style.artistHdr}>
                 Releases by {artistName}
             </h1>
-            <button onClick={onPageDown} disabled={currentPage <= 1}>
-                previous page
-      </button>
-            <span> page {currentPage} of {pages} pages</span>
-            <button onClick={onPageUp} disabled={currentPage >= pages}>
-                next page
-      </button>
-            {releases.map((release) => <Release key={release.id} {...release} artistName={artistName} />)}
+            <div className={style.controls} >
+                <button
+                    onClick={onPageDown}
+                    disabled={currentPage <= 1}
+                    className={style.pageBtn}
+                    aria-label="page-down"
+                >
+                    previous page
+            </button>
+                <p> page {currentPage} of {pages} pages</p>
+                <button
+                    onClick={onPageUp}
+                    disabled={currentPage >= pages}
+                    className={style.pageBtn}
+                    aria-label="page-up"
+                >
+                    next page
+            </button>
+            </div >
+            <div className={style.albumlist} >
+                {releases.map((release) => <Release key={release.id} {...release} artistName={artistName} />)}
+            </div>
         </div>
     );
 }

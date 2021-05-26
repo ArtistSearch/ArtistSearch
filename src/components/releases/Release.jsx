@@ -3,6 +3,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import style from './Release.modules.css';
 
 export default function Release({ id, title, artistName }) {
     const image = `http://coverartarchive.org/release/${id}/front`;
@@ -12,8 +13,10 @@ export default function Release({ id, title, artistName }) {
 
     return (
         <Link to={`/release/${artistName}/${id}`}>
-            <h2>{title}</h2>
-            <img src={image} alt="album cover" onError={addDefaultSrc} style={{ maxWidth: '150px' }} />
+            <div className={style.albumCard} >
+                <h3 className={style.albumLink}>{title}</h3>
+                <img src={image} alt="album cover" onError={addDefaultSrc} style={{ maxWidth: '150px' }} />
+            </div>
         </Link>
     );
 }
