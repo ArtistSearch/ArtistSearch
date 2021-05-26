@@ -1,4 +1,6 @@
 /* eslint-disable max-len */
+import { songLengthConversion } from './mathUtils';
+
 export const getArtistsPage = async (search) => {
   const res = await fetch(
     `http://musicbrainz.org/ws/2/artist?query=${search}&fmt=json&limit=20`
@@ -7,7 +9,6 @@ export const getArtistsPage = async (search) => {
   const { count } = await res.json();
 
   return Math.ceil(count / 20);
-
 };
 
 export const getArtists = async (search, page) => {
@@ -56,9 +57,13 @@ export const getAlbumInfo = async (releaseID) => {
   const { recordings } = await res.json();
 
   return recordings.map((recording) => {
+    const duration = songLengthConversion(recording.length);
     return {
       id: recording.id,
       title: recording.title,
+      length: duration,
     };
   });
 };
+
+
