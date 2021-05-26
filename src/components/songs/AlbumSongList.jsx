@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import styles from './AlbumSongList.css';
 
 export default function AlbumSongList({ songs, art, artist, title }) {
-  //add a variable to convert song length from ms to min:sec
   return (
     <section className={styles.trackListWrapper}>
       <div className={styles.albumHeading}>
@@ -17,21 +16,23 @@ export default function AlbumSongList({ songs, art, artist, title }) {
           height="100"
           alt="album cover art"
         />
-        <h3>
-          {title}
-        </h3>
-        <h3>
-          <em>by</em> {artist}
-        </h3>
+        <figcaption>
+          {' '}
+          <h1>{title}</h1>
+          <h3>
+            <em>by</em> {artist}
+          </h3>
+        </figcaption>
       </div>
 
       <ol className={styles.albumInfo} aria-label="Album Track List">
         {songs.map((song) => (
-          <Link to={`/song/${artist}/${song.title}`} key={song.id}>
-            <li key={song.id}>
+          <li key={song.id}>
+            <Link to={`/song/${artist}/${song.title}`} key={song.id}>
               <h4 aria-label="Song Title">{song.title}</h4>
-            </li>
-          </Link>
+            </Link>
+            <p>{song.length}</p>
+          </li>
         ))}
       </ol>
     </section>
@@ -41,8 +42,5 @@ export default function AlbumSongList({ songs, art, artist, title }) {
 AlbumSongList.propTypes = {
   art: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  length: PropTypes.number.isRequired,
 };
-
-//in case song length is added in...
-//<p>{song.length}</p>
-//length: PropTypes.number.isRequired,

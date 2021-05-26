@@ -5,115 +5,145 @@ exports[`Detail page Container Component displays a list of the songs on the alb
   aria-label="Album Track List"
   class="albumInfo"
 >
-  <a
-    href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Trouble"
-  >
-    <li>
+  <li>
+    <a
+      href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Trouble"
+    >
       <h4
         aria-label="Song Title"
       >
         Trouble
       </h4>
-    </li>
-  </a>
-  <a
-    href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Sparks"
-  >
-    <li>
+    </a>
+    <p>
+      (4:30)
+    </p>
+  </li>
+  <li>
+    <a
+      href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Sparks"
+    >
       <h4
         aria-label="Song Title"
       >
         Sparks
       </h4>
-    </li>
-  </a>
-  <a
-    href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Parachutes"
-  >
-    <li>
+    </a>
+    <p>
+      (3:47)
+    </p>
+  </li>
+  <li>
+    <a
+      href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Parachutes"
+    >
       <h4
         aria-label="Song Title"
       >
         Parachutes
       </h4>
-    </li>
-  </a>
-  <a
-    href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Spies"
-  >
-    <li>
+    </a>
+    <p>
+      (0:46)
+    </p>
+  </li>
+  <li>
+    <a
+      href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Spies"
+    >
       <h4
         aria-label="Song Title"
       >
         Spies
       </h4>
-    </li>
-  </a>
-  <a
-    href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Shiver"
-  >
-    <li>
+    </a>
+    <p>
+      (5:18)
+    </p>
+  </li>
+  <li>
+    <a
+      href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Shiver"
+    >
       <h4
         aria-label="Song Title"
       >
         Shiver
       </h4>
-    </li>
-  </a>
-  <a
-    href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Yellow"
-  >
-    <li>
+    </a>
+    <p>
+      (4:59)
+    </p>
+  </li>
+  <li>
+    <a
+      href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Yellow"
+    >
       <h4
         aria-label="Song Title"
       >
         Yellow
       </h4>
-    </li>
-  </a>
-  <a
-    href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Everything’s Not Lost / Life Is for Living"
-  >
-    <li>
+    </a>
+    <p>
+      (4:29)
+    </p>
+  </li>
+  <li>
+    <a
+      href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Everything’s Not Lost / Life Is for Living"
+    >
       <h4
         aria-label="Song Title"
       >
         Everything’s Not Lost / Life Is for Living
       </h4>
-    </li>
-  </a>
-  <a
-    href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/We Never Change"
-  >
-    <li>
+    </a>
+    <p>
+      (7:16)
+    </p>
+  </li>
+  <li>
+    <a
+      href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/We Never Change"
+    >
       <h4
         aria-label="Song Title"
       >
         We Never Change
       </h4>
-    </li>
-  </a>
-  <a
-    href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/High Speed"
-  >
-    <li>
+    </a>
+    <p>
+      (4:9)
+    </p>
+  </li>
+  <li>
+    <a
+      href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/High Speed"
+    >
       <h4
         aria-label="Song Title"
       >
         High Speed
       </h4>
-    </li>
-  </a>
-  <a
-    href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Don’t Panic"
-  >
-    <li>
+    </a>
+    <p>
+      (4:14)
+    </p>
+  </li>
+  <li>
+    <a
+      href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Don’t Panic"
+    >
       <h4
         aria-label="Song Title"
       >
         Don’t Panic
       </h4>
-    </li>
-  </a>
+    </a>
+    <p>
+      (2:17)
+    </p>
+  </li>
 </ol>
 `;
