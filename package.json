@@ -4,6 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "jest": {
+    "testEnvironment": "jsdom",
     "setupFilesAfterEnv": [
       "@testing-library/jest-dom/extend-expect",
       "<rootDir>/src/setupTests.js"
@@ -47,7 +48,7 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^27.0.1",
+    "jest": "^26.6.3",
     "msw": "^0.29.0",
     "node-fetch": "^2.6.1",
     "postcss-import": "^14.0.2",

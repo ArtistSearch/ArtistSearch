@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import SearchControls from '../components/artistSearch/SearchControls';
 import SearchList from '../components/artistSearch/SearchList';
 import { getArtists } from '../services/getArtists';
+import Loading from '../components/Loading';
 
 export default class ArtistSearch extends Component {
   state = {
@@ -60,7 +61,7 @@ export default class ArtistSearch extends Component {
     const { loading, artists, search, currentPage, totalPages } = this.state;
 
     // eslint-disable-next-line keyword-spacing
-    if (loading) return <h1>Loading...</h1>;
+    if (loading) return <Loading />;
     return (
       <>
         <SearchControls

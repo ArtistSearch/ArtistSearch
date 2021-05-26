@@ -10,9 +10,9 @@ const SearchList = ({ artists }) => (
     <ul aria-label="artists">
         {artists.map((artist) => (
             <li key={artist.id}>
-
-                <Search name={artist.name} />
-
+                <Link to={`/artistDetail/${artist.name}/${artist.id}`}>
+                    <Search name={artist.name} />
+                </Link>
             </li>
         ))}
     </ul>
