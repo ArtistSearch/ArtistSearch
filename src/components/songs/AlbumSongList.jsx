@@ -12,6 +12,7 @@ export default function albumSongList({ songs, art }) {
           'http://placekitten.com/200/300'
         }
         height="100"
+        alt="album cover art"
       />
       <ul aria-label="Album Track List">
         {songs.map((song) => (

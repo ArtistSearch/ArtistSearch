@@ -12,8 +12,8 @@ export default function albumDetails(props) {
       .then(setSongList)
       .finally(() => setLoading(false));
   });
-  console.log('|||||', albumId);
-  console.log('////Songlist', songList);
+  //console.log('|||||', albumId);
+  //console.log('////Songlist', songList);
 
   if (loading) return <h2>Loading...</h2>;
 
