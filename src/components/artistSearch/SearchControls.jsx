@@ -14,14 +14,14 @@ const SearchControls = ({
 }) => (
     <>
         <form onSubmit={onSubmit} >
-            <label>Search Artists</label>
+            <label htmlFor="artist-name">Search Artists
             <input
-                id="artists-search"
-                type="text"
-                value={search}
-                onChange={onChange}
-            />
-            <button>Search</button>
+                    id="artists-search"
+                    type="text"
+                    value={search}
+                    onChange={onChange}
+                /></label>
+            <button aria-label="search-artists">Search</button>
         </form>
         <br />
         <button onClick={onDecrementPage} disabled={currentPage <= 0}>&lt;</button>

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 //need to add link!!!!!!
 
 const SearchList = ({ artists }) => (
-    <ul>
+    <ul aria-label="artists">
         {artists.map((artist) => (
             <li key={artist.id}>
 
