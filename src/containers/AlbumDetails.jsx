@@ -3,8 +3,9 @@ import { useParams } from 'react-router-dom';
 import { getAlbumInfo } from '../services/getArtists';
 import AlbumSongList from '../components/songs/AlbumSongList';
 
+//may need to get the actual album name passed down from ArtistDetails...
 
-export default function AlbumDetails(props) {
+export default function AlbumDetails() {
   const [loading, setLoading] = useState(true);
   const [songList, setSongList] = useState([]);
 
