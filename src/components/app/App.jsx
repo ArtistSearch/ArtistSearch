@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import ArtistSearch from '../../containers/ArtistSearch'
+import ArtistSearch from '../../containers/ArtistSearch';
 import ArtistDetails from '../../containers/ArtistDetails';
 import SongDetails from '../../containers/SongDetails';
 import AlbumDetails from '../../containers/AlbumDetails';
@@ -16,11 +16,13 @@ export default function App() {
         />
         <Route
           path="/artistDetail/:artistName/:artistId"
-          exact render={(routerProps) => <ArtistDetails {...routerProps} />}
+          exact
+          render={(routerProps) => <ArtistDetails {...routerProps} />}
         />
         <Route
           path="/release/:artistName/:releaseId/"
-          exact render={(routerProps) => <AlbumDetails {...routerProps} />}
+          exact
+          render={(routerProps) => <AlbumDetails {...routerProps} />}
         />
         <Route
           path="/song/:artistName/:title"

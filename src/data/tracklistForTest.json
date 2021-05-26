@@ -1,0 +1,86 @@
+{
+  "recording-count": 10,
+  "recording-offset": 0,
+  "recordings": [
+    {
+      "id": "1aa7ebc0-25ee-47b2-8efd-6074307c5b14",
+      "length": 270946,
+      "video": false,
+      "title": "Trouble",
+      "disambiguation": "",
+      "first-release-date": "2000-07-10"
+    },
+    {
+      "title": "Sparks",
+      "disambiguation": "",
+      "first-release-date": "2000-07-10",
+      "video": false,
+      "length": 227093,
+      "id": "22d49305-4e35-4a69-8638-05ac5f734065"
+    },
+    {
+      "title": "Parachutes",
+      "disambiguation": "",
+      "first-release-date": "2000-07-10",
+      "video": false,
+      "length": 46200,
+      "id": "3451489e-ea50-4e4e-9043-df1e30ce37b5"
+    },
+    {
+      "title": "Spies",
+      "first-release-date": "2000-07-10",
+      "disambiguation": "",
+      "video": false,
+      "length": 318773,
+      "id": "50369905-68ca-48d2-912d-b37330ff7dc3"
+    },
+    {
+      "video": false,
+      "title": "Shiver",
+      "disambiguation": "",
+      "first-release-date": "2000-03-06",
+      "id": "71557258-6534-4b56-8007-3903ace2d869",
+      "length": 299693
+    },
+    {
+      "video": false,
+      "first-release-date": "2000-06-26",
+      "disambiguation": "",
+      "title": "Yellow",
+      "id": "729cf505-94eb-4fbe-bc76-cbae44cff091",
+      "length": 269200
+    },
+    {
+      "disambiguation": "",
+      "first-release-date": "2000-07-10",
+      "title": "Everything’s Not Lost / Life Is for Living",
+      "video": false,
+      "length": 436066,
+      "id": "78485fd1-136d-4f2b-ae93-d9815d828e26"
+    },
+    {
+      "video": false,
+      "title": "We Never Change",
+      "first-release-date": "2000-07-10",
+      "disambiguation": "",
+      "id": "7e52d1a9-6c02-4f2e-b30e-dc22ef219f3f",
+      "length": 249400
+    },
+    {
+      "id": "94909689-459c-4d15-8e31-678854c48f22",
+      "length": 254360,
+      "video": false,
+      "title": "High Speed",
+      "first-release-date": "1999-10-11",
+      "disambiguation": ""
+    },
+    {
+      "id": "fb81a071-9c63-4e8c-ab60-77403e81c01d",
+      "length": 137053,
+      "video": false,
+      "disambiguation": "",
+      "first-release-date": "2000-07-10",
+      "title": "Don’t Panic"
+    }
+  ]
+}

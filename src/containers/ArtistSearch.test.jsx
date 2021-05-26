@@ -7,13 +7,13 @@ import userEvent from '@testing-library/user-event';
 import ArtistSearch from './artistSearch';
 
 describe('Artist search Container', () => {
-    it('displays a list of artist from user input', async () => {
-        render(<ArtistSearch />);
+  it('displays a list of artist from user input', async () => {
+    render(<ArtistSearch />);
 
-        const ul = await screen.findByRole('list', { name: 'artists' });
-        expect(ul).toBeEmptyDOMElement();
+    const ul = await screen.findByRole('list', { name: 'artists' });
+    expect(ul).toBeEmptyDOMElement();
 
-        /*const input = await screen.findByLabelText('Search Artists');
+    /*const input = await screen.findByLabelText('Search Artists');
         fireEvent.input(input, 'Beatles');
 
         // eslint-disable-next-line max-len
@@ -21,5 +21,5 @@ describe('Artist search Container', () => {
         fireEvent.submit(submitButton);
 
         */
-    });
+  });
 });
