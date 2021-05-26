@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import SongDetails from '../../containers/songDetails';
+import SongDetails from '../../containers/SongDetails';
 
 export default function App() {
   return (
