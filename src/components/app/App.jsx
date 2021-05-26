@@ -7,6 +7,16 @@ export default function App() {
     <Router>
       <Switch>
         <Route
+          path="/artistDetail/:artistName/:artistId"
+          exact
+          render={(routerProps) => <ArtistDetails {...routerProps} />}
+        />
+        <Route
+          path="/release/:artistName/:releaseId/"
+          exact
+          render={(routerProps) => <albumDetails {...routerProps} />}
+        />
+        <Route
           path="/:artistName/release/:title"
           exact
           render={(routerProps) => <SongDetails {...routerProps} />}
