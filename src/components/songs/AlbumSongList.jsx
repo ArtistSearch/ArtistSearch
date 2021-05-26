@@ -1,13 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import {styles} from './AlbumSongList.css';
+import styles from './AlbumSongList.css';
 
-export default function albumSongList({ songs, art }) {
+export default function AlbumSongList({ songs, art }) {
   //add a variable to convert song length from ms to min:sec
   return (
     <>
-      <img className={styles.albumImage}
+      <img
+        className={styles.albumImage}
         src={
           `http://coverartarchive.org/release/${art}/front` ||
           'http://placekitten.com/200/300'
@@ -29,8 +30,8 @@ export default function albumSongList({ songs, art }) {
   );
 }
 
-albumSongList.propTypes = {
-  art: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  length: PropTypes.number.isRequired,
-};
+// albumSongList.propTypes = {
+//   art: PropTypes.string.isRequired,
+//   title: PropTypes.string.isRequired,
+//   length: PropTypes.number.isRequired,
+// };

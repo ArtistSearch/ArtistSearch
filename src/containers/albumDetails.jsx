@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getAlbumInfo } from '../services/getArtists';
 import AlbumSongList from '../components/songs/AlbumSongList';
 
-export default function albumDetails(props) {
+export default function AlbumDetails(props) {
   const [loading, setLoading] = useState(true);
   const [songList, setSongList] = useState([]);
   const albumId = props.match.params.releaseId;
@@ -11,9 +11,7 @@ export default function albumDetails(props) {
     getAlbumInfo(albumId)
       .then(setSongList)
       .finally(() => setLoading(false));
-  });
-  //console.log('|||||', albumId);
-  //console.log('////Songlist', songList);
+  }, []);
 
   if (loading) return <h2>Loading...</h2>;
 
