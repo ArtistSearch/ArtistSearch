@@ -47,19 +47,3 @@ export const getAlbumInfo = async (releaseID) => {
     };
   });
 };
-
-// the following two functions for AlbumDetails will only work if the artistId can be passed in, not the artistName...
-
-// function checkReleaseId(releaseId) {
-//   return release.id === releaseId;
-// }
-
-// export const getAlbumTitle = async (artistId) => {
-//   const
-//   const res = await fetch(
-//     `http://musicbrainz.org/ws/2/release?artist=${artistId}&fmt=json`
-//   );
-
-//   const { releases } = await res.json();
-//   return releases.filter(checkReleaseId);
-// };
