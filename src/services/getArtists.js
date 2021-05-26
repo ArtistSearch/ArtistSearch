@@ -1,17 +1,14 @@
-/* eslint-disable max-len */
-export const getArtists = async (search) => {
+export const getArtists = async (search, page) => {
   const res = await fetch(
-    `http://musicbrainz.org/ws/2/artist?query=${search}&fmt=json&limit=25`
+    `http://musicbrainz.org/ws/2/artist?query=${search}&fmt=json&limit=25&offset=${page}`
   );
 
-  const { artists } = await res.json();
+  const { artists, count } = await res.json();
 
-  return artists.map((artist) => {
-    return {
-      id: artist.id,
-      name: artist.name,
-    };
-  });
+  return {
+    totalPages: Math.ceil(count / 25),
+    artists,
+  };
 };
 
 export const getReleaseCount = async (artistID) => {
