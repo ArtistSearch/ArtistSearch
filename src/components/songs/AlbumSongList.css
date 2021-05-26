@@ -41,8 +41,9 @@ p {
 
 h4 {
   color: #e24d43;
+  margin: 10px;
 }
 
-/* ol {
+ul {
   list-style-type: none;
-} */
+}

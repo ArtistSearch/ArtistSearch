@@ -1,18 +1,23 @@
+/* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styles from './AlbumSongList.css';
 
 export default function AlbumSongList({ songs, art, artist, title }) {
+  const addDefaultSrc = (e) => {
+    e.target.src = 'http://www.scottishculture.org/themes/scottishculture/images/music_placeholder.png';
+  };
+
   return (
     <section className={styles.trackListWrapper}>
       <div className={styles.albumHeading}>
         <img
           className={styles.albumImage}
           src={
-            `http://coverartarchive.org/release/${art}/front` ||
-            'http://placekitten.com/200/300'
+            `http://coverartarchive.org/release/${art}/front`
           }
+          onError={addDefaultSrc}
           height="100"
           alt="album cover art"
         />

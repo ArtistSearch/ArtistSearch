@@ -36,14 +36,14 @@ export default function artistDetails() {
     };
 
     if (loading) return (
-        <div className={style.artistPage}>
+        <div className={style.pageWrapper}>
             <Loading />
         </div>
     );
 
     return (
-        <div className={style.artistPage}>
-            <h1 className={style.artistHdr}>
+        <div className={style.pageWrapper}>
+            <h1 className={style.heading}>
                 Releases by {artistName}
             </h1>
             <div className={style.controls} >
