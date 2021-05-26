@@ -5,7 +5,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter, Route } from 'react-router-dom';
 import ArtistDetails from './ArtistDetails';
 
-describe.skip('tests Artist Details page', () => {
+describe('tests Artist Details page', () => {
   it('shows a list of recordings by the artists id in the url', async () => {
     render(
       <MemoryRouter

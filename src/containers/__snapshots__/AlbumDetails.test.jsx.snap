@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Detail page Container Component displays a list of the songs on the album 1`] = `
-<ul
+<ol
   aria-label="Album Track List"
   class="albumInfo"
 >
@@ -115,5 +115,5 @@ exports[`Detail page Container Component displays a list of the songs on the alb
       </h4>
     </li>
   </a>
-</ul>
+</ol>
 `;

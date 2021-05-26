@@ -6,7 +6,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import ArtistSearch from './artistSearch';
 
-describe.skip('Artist search Container', () => {
+describe('Artist search Container', () => {
   it('displays a list of artist from user input', async () => {
     render(<ArtistSearch />);
 
