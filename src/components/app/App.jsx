@@ -20,7 +20,7 @@ export default function App() {
           render={(routerProps) => <ArtistDetails {...routerProps} />}
         />
         <Route
-          path="/release/:artistName/:releaseId/"
+          path="/release/:artistName/:releaseId/:title"
           exact
           render={(routerProps) => <AlbumDetails {...routerProps} />}
         />
