@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getAlbumInfo } from '../services/getArtists';
 import AlbumSongList from '../components/songs/AlbumSongList';
 
+
 export default function AlbumDetails(props) {
   const [loading, setLoading] = useState(true);
   const [songList, setSongList] = useState([]);
