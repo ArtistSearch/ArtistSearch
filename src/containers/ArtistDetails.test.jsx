@@ -3,9 +3,10 @@
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter, Route } from 'react-router-dom';
-import ArtistDetails from './ArtistDetails';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
+import userEvent from '@testing-library/user-event';
+import ArtistDetails from './ArtistDetails';
 
 const artistData = {
     "release-count": 251,
@@ -242,6 +243,15 @@ describe('tests Artist Details page', () => {
         );
 
         screen.getByAltText('Loading...');
+
+        const pgUpBtn = await screen.findByRole('button', {
+            name: 'page-up',
+        });
+        const pgDownBtn = await screen.findByRole('button', {
+            name: 'page-down',
+        });
+        userEvent.click(pgUpBtn);
+        userEvent.click(pgDownBtn);
 
         return waitFor(() => {
             screen.getByText('Coldplay', { exact: false });

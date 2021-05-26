@@ -47,11 +47,21 @@ export default function artistDetails() {
                 Releases by {artistName}
             </h1>
             <div className={style.controls} >
-                <button onClick={onPageDown} disabled={currentPage <= 1} className={style.pageBtn}>
+                <button
+                    onClick={onPageDown}
+                    disabled={currentPage <= 1}
+                    className={style.pageBtn}
+                    aria-label="page-down"
+                >
                     previous page
             </button>
                 <p> page {currentPage} of {pages} pages</p>
-                <button onClick={onPageUp} disabled={currentPage >= pages} className={style.pageBtn}>
+                <button
+                    onClick={onPageUp}
+                    disabled={currentPage >= pages}
+                    className={style.pageBtn}
+                    aria-label="page-up"
+                >
                     next page
             </button>
             </div >
