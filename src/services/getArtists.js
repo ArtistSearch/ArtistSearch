@@ -14,9 +14,17 @@ export const getArtists = async (search) => {
   });
 };
 
-export const getReleases = async (artistID) => {
+export const getReleaseCount = async (artistID) => {
   const res = await fetch(
     `http://musicbrainz.org/ws/2/release?artist=${artistID}&fmt=json`
+  );
+  const response = await res.json();
+  return Math.ceil(response['release-count'] / 20);
+};
+
+export const getReleases = async (artistID, pageOffset) => {
+  const res = await fetch(
+    `http://musicbrainz.org/ws/2/release?artist=${artistID}&fmt=json&limit=20&offset=${pageOffset}`
   );
 
   const { releases } = await res.json();
@@ -31,9 +39,8 @@ export const getReleases = async (artistID) => {
 
 export const getAlbumInfo = async (releaseID) => {
   const res = await fetch(
-    `http://musicbrainz.org/ws/2/recording?release=${releaseID}&fmt=json`
+    `https://musicbrainz.org/ws/2/recording?release=${releaseID}&fmt=json`
   );
-
   const { recordings } = await res.json();
 
   return recordings.map((recording) => {
