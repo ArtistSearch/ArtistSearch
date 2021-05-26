@@ -2,6 +2,7 @@
 /* eslint-disable max-len */
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import Loading from '../components/Loading';
 import Release from '../components/releases/Release';
 import { getReleases, getReleaseCount } from '../services/getArtists';
 
@@ -35,7 +36,7 @@ export default function artistDetails() {
   };
 
   if (loading) return (
-    <h1>Loading...</h1>
+    <Loading />
   );
 
   return (
