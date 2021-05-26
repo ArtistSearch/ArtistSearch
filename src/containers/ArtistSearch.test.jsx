@@ -4,7 +4,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import ArtistSearch from './artistSearch';
+import ArtistSearch from './ArtistSearch';
 
 describe('Artist search Container', () => {
   it('displays a list of artist from user input', async () => {
