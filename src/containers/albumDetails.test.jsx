@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import AlbumDetails from './AlbumDetails';
-// import { MemoryRouter, Route } from 'react-router-dom';
+import { MemoryRouter, Route } from 'react-router-dom';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 
@@ -106,8 +106,6 @@ describe('Detail page Container Component', () => {
   afterAll(() => server.close());
 
   it('displays a list of the songs on the album', async () => {
-    render(<AlbumDetails />);
-
     render(
       <MemoryRouter>
         <Route path="/:releaseId">
@@ -118,7 +116,7 @@ describe('Detail page Container Component', () => {
       </MemoryRouter>
     );
 
-    const loadingScreen = await screen.getByText('loadingScreen...');
+    const loadingScreen = await screen.getByText('Loading...');
     expect(loadingScreen).toMatchSnapshot();
 
     const titleHeading = await screen.findByRole('heading');

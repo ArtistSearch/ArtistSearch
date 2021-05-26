@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import {styles} from './AlbumSongList.css';
 
 export default function albumSongList({ songs, art }) {
   //add a variable to convert song length from ms to min:sec
   return (
     <>
-      <img
+      <img className={styles.albumImage}
         src={
           `http://coverartarchive.org/release/${art}/front` ||
           'http://placekitten.com/200/300'
@@ -14,7 +15,7 @@ export default function albumSongList({ songs, art }) {
         height="100"
         alt="album cover art"
       />
-      <ul aria-label="Album Track List">
+      <ul className={styles.albumInfo} aria-label="Album Track List">
         {songs.map((song) => (
           <Link to="/">
             <li key={song.id}>
