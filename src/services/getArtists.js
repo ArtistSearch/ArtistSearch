@@ -14,9 +14,9 @@ export const getArtists = async (search) => {
   });
 };
 
-export const getReleases = async (artistID) => {
+export const getReleases = async (artistID, pageOffset) => {
   const res = await fetch(
-    `http://musicbrainz.org/ws/2/release?artist=${artistID}&fmt=json`
+    `http://musicbrainz.org/ws/2/release?artist=${artistID}&fmt=json&limit=20&offset=${pageOffset}`
   );
 
   const { releases } = await res.json();

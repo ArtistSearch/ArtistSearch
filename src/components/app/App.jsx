@@ -5,6 +5,7 @@ import {
   Switch,
 } from 'react-router-dom';
 import ArtistDetails from '../../containers/artistDetails';
+import albumDetails from '../../containers/albumDetails';
 
 export default function App() {
   return <Router>
