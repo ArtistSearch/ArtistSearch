@@ -13,8 +13,7 @@ export default function artistDetails() {
     const [pages, setPages] = useState(0);
     const [currentPage, setCurrentpage] = useState(1);
 
-    const { artistName } = useParams();
-    const { artistId } = useParams();
+    const { artistName, artistId } = useParams();
 
     useEffect(() => {
         setLoading(true);
