@@ -1,7 +1,119 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Detail page Container Component displays a list of the songs on the album 1`] = `
-<h2>
-  Loading...
-</h2>
+<ul
+  aria-label="Album Track List"
+  class="albumInfo"
+>
+  <a
+    href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Trouble"
+  >
+    <li>
+      <h4
+        aria-label="Song Title"
+      >
+        Trouble
+      </h4>
+    </li>
+  </a>
+  <a
+    href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Sparks"
+  >
+    <li>
+      <h4
+        aria-label="Song Title"
+      >
+        Sparks
+      </h4>
+    </li>
+  </a>
+  <a
+    href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Parachutes"
+  >
+    <li>
+      <h4
+        aria-label="Song Title"
+      >
+        Parachutes
+      </h4>
+    </li>
+  </a>
+  <a
+    href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Spies"
+  >
+    <li>
+      <h4
+        aria-label="Song Title"
+      >
+        Spies
+      </h4>
+    </li>
+  </a>
+  <a
+    href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Shiver"
+  >
+    <li>
+      <h4
+        aria-label="Song Title"
+      >
+        Shiver
+      </h4>
+    </li>
+  </a>
+  <a
+    href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Yellow"
+  >
+    <li>
+      <h4
+        aria-label="Song Title"
+      >
+        Yellow
+      </h4>
+    </li>
+  </a>
+  <a
+    href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Everything’s Not Lost / Life Is for Living"
+  >
+    <li>
+      <h4
+        aria-label="Song Title"
+      >
+        Everything’s Not Lost / Life Is for Living
+      </h4>
+    </li>
+  </a>
+  <a
+    href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/We Never Change"
+  >
+    <li>
+      <h4
+        aria-label="Song Title"
+      >
+        We Never Change
+      </h4>
+    </li>
+  </a>
+  <a
+    href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/High Speed"
+  >
+    <li>
+      <h4
+        aria-label="Song Title"
+      >
+        High Speed
+      </h4>
+    </li>
+  </a>
+  <a
+    href="/song/cc197bad-dc9c-440d-a5b5-d52ba2e14234/Don’t Panic"
+  >
+    <li>
+      <h4
+        aria-label="Song Title"
+      >
+        Don’t Panic
+      </h4>
+    </li>
+  </a>
+</ul>
 `;

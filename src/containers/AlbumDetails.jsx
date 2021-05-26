@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getAlbumInfo } from '../services/getArtists';
 import AlbumSongList from '../components/songs/AlbumSongList';
+import Loading from '../components/Loading';
 
 //may need to get the actual album name passed down from ArtistDetails...
 
@@ -17,7 +18,7 @@ export default function AlbumDetails() {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <h2>Loading...</h2>;
+  if (loading) return <Loading />;
 
   return (
     <section>
