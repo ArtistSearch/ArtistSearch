@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ArtistSearch from '../../containers/ArtistSearch'
 import ArtistDetails from '../../containers/ArtistDetails';
 import SongDetails from '../../containers/SongDetails';
-import ArtistSearch from '../../containers/ArtistSearch';
 import AlbumDetails from '../../containers/AlbumDetails';
 
 export default function App() {
