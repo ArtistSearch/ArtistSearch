@@ -1,7 +1,22 @@
+.trackListWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.albumHeading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .albumImage {
   border: solid 1px black;
   border-radius: 4px;
   padding: 4px;
+  margin: 20px;
 }
 
 .albumInfo {
@@ -11,3 +26,7 @@
   justify-content: center;
   text-align: center;
 }
+
+/* ol {
+  list-style-type: none;
+} */

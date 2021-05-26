@@ -32,22 +32,17 @@ describe('Detail page Container Component', () => {
       </MemoryRouter>
     );
 
+    //test for the <ul> that contains the song titles:
     const trackList = await screen.findByRole('list', {
       name: 'Album Track List',
     });
     expect(trackList).toMatchSnapshot();
     expect(trackList).not.toBeEmptyDOMElement();
 
-    // const loadingScreen = await screen.getByText('Loading...');
-    // expect(loadingScreen).toMatchSnapshot();
-
-    // const titleHeading = await screen.findByRole('heading', {
-    //   name: 'Song Title',
-    // });
-    // expect(titleHeading).toMatchSnapshot();
-
     return waitFor(() => {
+      //test for proper track listing via a song title:
       screen.getByText(/Sparks/);
+      //test for cover art image:
       screen.getByAltText('album cover art');
     });
   });

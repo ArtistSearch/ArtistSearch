@@ -6,17 +6,23 @@ import styles from './AlbumSongList.css';
 export default function AlbumSongList({ songs, art, artist }) {
   //add a variable to convert song length from ms to min:sec
   return (
-    <>
-      <img
-        className={styles.albumImage}
-        src={
-          `http://coverartarchive.org/release/${art}/front` ||
-          'http://placekitten.com/200/300'
-        }
-        height="100"
-        alt="album cover art"
-      />
-      <ul className={styles.albumInfo} aria-label="Album Track List">
+    <section className={styles.trackListWrapper}>
+      <div className={styles.albumHeading}>
+        <img
+          className={styles.albumImage}
+          src={
+            `http://coverartarchive.org/release/${art}/front` ||
+            'http://placekitten.com/200/300'
+          }
+          height="100"
+          alt="album cover art"
+        />
+        <h3>
+          <em>by</em> {artist}
+        </h3>
+      </div>
+
+      <ol className={styles.albumInfo} aria-label="Album Track List">
         {songs.map((song) => (
           <Link to={`/song/${artist}/${song.title}`} key={song.id}>
             <li key={song.id}>
@@ -24,8 +30,8 @@ export default function AlbumSongList({ songs, art, artist }) {
             </li>
           </Link>
         ))}
-      </ul>
-    </>
+      </ol>
+    </section>
   );
 }
 
