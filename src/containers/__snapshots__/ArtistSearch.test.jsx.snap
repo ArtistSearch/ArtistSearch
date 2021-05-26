@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Artist search Container displays a list of artist from user input 1`] = `
+<ul
+  aria-label="artists"
+/>
+`;

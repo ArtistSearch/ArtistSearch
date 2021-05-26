@@ -5,7 +5,7 @@ import SearchList from '../components/artistSearch/SearchList';
 import Loading from '../components/Loading';
 import { getArtists, getArtistsPage } from '../services/getArtists';
 
-export default function TestSearch() {
+export default function ArtistsSearch() {
   const [loading, setLoading] = useState(false);
   const [pageOffset, setOffset] = useState(0);
   const [pages, setPages] = useState(0);
@@ -24,7 +24,6 @@ export default function TestSearch() {
   }, [search, pageOffset]);
 
   const handleSearch = (e) => {
-
     setNewSearch(e.target.value);
   };
 
