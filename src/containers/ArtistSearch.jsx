@@ -1,80 +1,66 @@
-/* eslint-disable max-len */
-import React, { Component } from 'react';
+
+import React, { useEffect, useState } from 'react';
 import SearchControls from '../components/artistSearch/SearchControls';
 import SearchList from '../components/artistSearch/SearchList';
-import { getArtists } from '../services/getArtists';
 import Loading from '../components/Loading';
+import { getArtists, getArtistsPage } from '../services/getArtists';
 
-export default class ArtistSearch extends Component {
-  state = {
-    loading: false,
-    currentPage: 0,
-    totalPages: 0,
-    artists: [],
-    search: ''
-  }
+export default function TestSearch() {
+  const [loading, setLoading] = useState(false);
+  const [pageOffset, setOffset] = useState(0);
+  const [pages, setPages] = useState(0);
+  const [currentPage, setCurrentpage] = useState(1);
+  const [newSearch, setNewSearch] = useState('');
+  const [artists, setArtists] = useState([]);
+  const [search, setSearch] = useState('');
 
-  componentDidMount() {
+  useEffect(() => {
+    setLoading(true);
+    getArtistsPage(search)
+      .then(setPages);
+    getArtists(search, pageOffset)
+      .then(setArtists)
+      .finally(() => setLoading(false));
+  }, [search, pageOffset]);
 
-  }
+  const handleSearch = (e) => {
 
-  handelSearchChange = ({ target }) => {
-    this.setState({ search: target.value });
-  }
-
-  handelSubmit = async (e) => {
-    e.preventDefault();
-    this.setState({ loading: true });
-    const { totalPages, artists } = await getArtists(this.state.search, this.state.currentPage);
-    this.setState({
-      loading: false,
-      artists,
-      totalPages
-    });
-  }
-
-  handelDecresementPage = async (e) => {
-    e.preventDefault();
-    this.setState({ loading: true });
-    this.setState((state) => ({ currentPage: state.currentPage - 1 }));
-    const { totalPages, artists } = await getArtists(this.state.search, this.state.currentPage);
-    this.setState({
-      loading: false,
-      artists,
-      totalPages
-    });
-  }
-
-  handleIncrementPage = async (e) => {
-    e.preventDefault();
-    this.setState({ loading: true });
-    this.setState((state) => ({ currentPage: state.currentPage + 1 }));
-    const { totalPages, artists } = await getArtists(this.state.search, this.state.currentPage);
-    this.setState({
-      loading: false,
-      artists,
-      totalPages
-    });
+    setNewSearch(e.target.value);
   };
 
-  render() {
-    const { loading, artists, search, currentPage, totalPages } = this.state;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSearch(newSearch);
+    setCurrentpage(1);
+  };
 
-    // eslint-disable-next-line keyword-spacing
-    if (loading) return <Loading />;
-    return (
-      <>
-        <SearchControls
-          search={search}
-          onChange={this.handelSearchChange}
-          onSubmit={this.handelSubmit}
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onDecrementPage={this.handelDecresementPage}
-          onIncrementPage={this.handleIncrementPage}
-        />
-        <SearchList artists={artists} />
-      </>
-    );
-  }
+  const onPageDown = () => {
+    setOffset(pageOffset - 20);
+    setCurrentpage(currentPage - 1);
+  };
+
+  const onPageUp = () => {
+    setOffset(pageOffset + 20);
+    setCurrentpage(currentPage + 1);
+  };
+
+  // eslint-disable-next-line keyword-spacing
+  if (loading) return (
+    <Loading />
+  );
+
+  return (
+    <>
+      <SearchControls
+        search={newSearch}
+        onChange={handleSearch}
+        onSubmit={handleSubmit}
+        onDecrementPage={onPageDown}
+        onIncrementPage={onPageUp}
+        currentPage={currentPage}
+        totalPages={pages}
+      />
+      <SearchList artists={artists} />
+    </>
+  );
 }

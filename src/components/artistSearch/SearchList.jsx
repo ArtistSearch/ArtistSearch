@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 import Search from './Search';
 import { Link } from 'react-router-dom';
 
-//need to add link!!!!!!
-
 const SearchList = ({ artists }) => (
     <ul aria-label="artists">
         {artists.map((artist) => (

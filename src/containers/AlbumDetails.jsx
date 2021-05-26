@@ -11,7 +11,7 @@ export default function AlbumDetails() {
   const [songList, setSongList] = useState([]);
   //const [albumTitle, setAlbumTitle] = useState('Album');
 
-  const { artistName, releaseId } = useParams();
+  const { artistName, releaseId, title } = useParams();
 
   useEffect(() => {
     getAlbumInfo(releaseId)
@@ -29,7 +29,7 @@ export default function AlbumDetails() {
 
   return (
     <section>
-      <AlbumSongList songs={songList} art={releaseId} artist={artistName} />
+      <AlbumSongList songs={songList} art={releaseId} artist={artistName} title={title} />
     </section>
   );
 }

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import style from './Lyrics.css';
 
 export default function Lyrics({ lyricsArray }) {
-  return <article>{lyricsArray}</article>;
+  return <article className={style.lyricWrapper}>{lyricsArray}</article>;
 }
 
 Lyrics.propTypes = {

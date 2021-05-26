@@ -12,7 +12,7 @@ export default function Release({ id, title, artistName }) {
     };
 
     return (
-        <Link to={`/release/${artistName}/${id}`}>
+        <Link to={`/release/${artistName}/${id}/${title}`}>
             <div className={style.albumCard} >
                 <h3 className={style.albumLink}>{title}</h3>
                 <img src={image} alt="album cover" onError={addDefaultSrc} style={{ maxWidth: '150px' }} />

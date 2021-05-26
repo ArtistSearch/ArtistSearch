@@ -24,7 +24,7 @@ const SearchControls = ({
             <button aria-label="search-artists">Search</button>
         </form>
         <br />
-        <button onClick={onDecrementPage} disabled={currentPage <= 0}>&lt;</button>
+        <button onClick={onDecrementPage} disabled={currentPage <= 1}>&lt;</button>
         <span>  {currentPage} / {totalPages} </span>
         <button onClick={onIncrementPage} disabled={currentPage >= totalPages}>&gt;</button>
     </>

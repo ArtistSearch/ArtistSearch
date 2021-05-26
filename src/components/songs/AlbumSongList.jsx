@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styles from './AlbumSongList.css';
 
-export default function AlbumSongList({ songs, art, artist }) {
+export default function AlbumSongList({ songs, art, artist, title }) {
   //add a variable to convert song length from ms to min:sec
   return (
     <section className={styles.trackListWrapper}>
@@ -17,6 +17,9 @@ export default function AlbumSongList({ songs, art, artist }) {
           height="100"
           alt="album cover art"
         />
+        <h3>
+          {title}
+        </h3>
         <h3>
           <em>by</em> {artist}
         </h3>
