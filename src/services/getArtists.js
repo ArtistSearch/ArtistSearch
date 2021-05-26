@@ -43,6 +43,8 @@ export const getReleases = async (artistID, pageOffset) => {
     return {
       id: release.id,
       title: release.title,
+      year: release.date.slice(0, 4),
+      country: release.country,
     };
   });
 };

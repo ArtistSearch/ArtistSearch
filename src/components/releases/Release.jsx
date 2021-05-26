@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import style from './Release.modules.css';
 
-export default function Release({ id, title, artistName }) {
+export default function Release({ id, title, year, country, artistName }) {
     const image = `http://coverartarchive.org/release/${id}/front`;
     const addDefaultSrc = (e) => {
         e.target.src = 'http://www.scottishculture.org/themes/scottishculture/images/music_placeholder.png';
@@ -15,7 +15,8 @@ export default function Release({ id, title, artistName }) {
         <Link to={`/release/${artistName}/${id}/${title}`}>
             <div className={style.albumCard} >
                 <h3 className={style.albumLink}>{title}</h3>
-                <img src={image} alt="album cover" onError={addDefaultSrc} style={{ maxWidth: '150px' }} />
+                <h5 className={style.albumYear}>{year}{country ? ' - ' + country : ''}</h5>
+                <img src={image} alt="album cover" onError={addDefaultSrc} style={{ maxWidth: '150px', maxHeight: '150px' }} />
             </div>
         </Link>
     );
@@ -24,5 +25,7 @@ export default function Release({ id, title, artistName }) {
 Release.propTypes = {
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    year: PropTypes.string.isRequired,
+    country: PropTypes.string.isRequired,
     artistName: PropTypes.string.isRequired,
 };
