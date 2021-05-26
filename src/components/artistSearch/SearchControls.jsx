@@ -14,7 +14,7 @@ const SearchControls = ({
 }) => (
     <>
         <form onSubmit={onSubmit} >
-            <label htmlFor="artist-name">Search Artists
+            <label aria-labelledby="artist-name">Search Artists
             <input
                     id="artists-search"
                     type="text"
