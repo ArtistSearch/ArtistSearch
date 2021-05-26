@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lyrics Container displays the lyrics of a song given the artist and title in the parameters 1`] = `
+<article
+  class="lyricWrapper"
+/>
+`;
