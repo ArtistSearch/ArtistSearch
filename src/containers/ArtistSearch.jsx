@@ -4,6 +4,7 @@ import SearchControls from '../components/artistSearch/SearchControls';
 import SearchList from '../components/artistSearch/SearchList';
 import Loading from '../components/Loading';
 import { getArtists, getArtistsPage } from '../services/getArtists';
+import style from '../components/releases/Release.modules.css';
 
 export default function ArtistsSearch() {
   const [loading, setLoading] = useState(false);
@@ -45,7 +46,9 @@ export default function ArtistsSearch() {
 
   // eslint-disable-next-line keyword-spacing
   if (loading) return (
-    <Loading />
+    <div className={style.pageWrapper}>
+      <Loading />
+    </div>
   );
 
   return (

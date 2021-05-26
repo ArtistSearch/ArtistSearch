@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Search = ({ name }) => (
     <>
-        <h1>{name}</h1>
+        <h4>{name}</h4>
     </>
 );
 

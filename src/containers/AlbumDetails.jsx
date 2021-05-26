@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { getAlbumInfo } from '../services/getArtists';
 import AlbumSongList from '../components/songs/AlbumSongList';
 import Loading from '../components/Loading';
+import style from '../components/songs/AlbumSongList.css'
 
 export default function AlbumDetails() {
   const [loading, setLoading] = useState(true);
@@ -16,7 +17,10 @@ export default function AlbumDetails() {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <Loading />;
+  if (loading) return (
+    <div className={style.trackListWrapper}>
+      <Loading />
+    </div>);
 
   return (
     <section>

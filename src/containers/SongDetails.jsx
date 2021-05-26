@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { getLyrics } from '../services/getLyrics';
 import { useParams } from 'react-router-dom';
 import Lyrics from '../components/lyrics/Lyrics';
+import Loading from '../components/Loading';
+import style from '../components/lyrics/lyrics.css';
 
 export default function SongDetails() {
   const [lyrics, setLyrics] = useState('');
@@ -14,11 +16,14 @@ export default function SongDetails() {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <h1>Loading...</h1>;
+  if (loading) return (
+    <div className={style.pageWrapper}>
+      <Loading />
+    </div>);
 
   return (
     <div>
-      <Lyrics lyricsArray={lyrics} />
+      <Lyrics lyrics={lyrics} title={title} artist={artistName} />
     </div>
   );
 }
